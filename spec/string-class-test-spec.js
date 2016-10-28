@@ -67,3 +67,10 @@ describe('Test for isQuestion method', function() {
     expect('Is this a ? question'.isQuestion()).toBe(false);
   });
 });
+
+describe('Test for words method', function() {
+  it('should return an array of the list of words ["It", "is", "working"]\
+    for "It is working".words()', function() {
+      expect('It is working'.isQuestion()).toBe(['It', 'is', 'working']);
+    });
+});
