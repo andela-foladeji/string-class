@@ -139,3 +139,13 @@ describe('Test for getMiddle method', function() {
     expect('reads'.getMiddle()).toBe('a');
   });
 });
+
+describe('Test for numberWords method', function() {
+  it('should return three two five for 325.numberWords()', function() {
+    expect('325'.getMiddle()).toBe('three two five');
+  });
+
+  it('should return one zero zero zero for 1,000.numberWords()', function() {
+    expect('1,000'.getMiddle()).toBe('one zero zero zero');
+  });
+});
