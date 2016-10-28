@@ -56,4 +56,14 @@ describe('Test for ucFirst method', function() {
   it('should return 12word "12word".ucFirst()', function() {
     expect('12word'.ucFirst()).toBe('12word');
   });
-}); 
+});
+
+describe('Test for isQuestion method', function() {
+  it('should return true for "Is this a question?".isQuestion()', function() {
+    expect('Is this a question?'.isQuestion()).toBe(true);
+  });
+
+  it('should return false for "Is this a ? question".isQuestion()', function() {
+    expect('Is this a ? question'.isQuestion()).toBe(false);
+  });
+});
