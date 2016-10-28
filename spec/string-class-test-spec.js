@@ -149,3 +149,13 @@ describe('Test for numberWords method', function() {
     expect('1,000'.getMiddle()).toBe('one zero zero zero');
   });
 });
+
+describe('Test for isDigit method', function() {
+  it('should return true for 3', function() {
+    expect('3'.isDigit()).toBe(true);
+  });
+
+  it('should return return false for 34', function() {
+    expect('45'.isDigit()).toBe(false);
+  });
+});
