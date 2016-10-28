@@ -159,3 +159,17 @@ describe('Test for isDigit method', function() {
     expect('45'.isDigit()).toBe(false);
   });
 });
+
+describe('Test for doubleCheck method', function() {
+  it('should return true for aagjglkdk.doubleCheck()', function() {
+    expect('aagjglkdk'.doubleCheck()).toBe(true);
+  });
+
+  it('should return true for spaced  twice', function() {
+    expect('spaced  twice'.doubleCheck()).toBe(true);
+  });
+
+  it('should return false for nothing', function() {
+    expect('nothing'.doubleCheck()).toBe(false);
+  });
+});
