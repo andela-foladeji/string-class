@@ -42,4 +42,18 @@ describe('Test for toLower() method', function() {
   it('should return "1,000,000." for "1,000,000.".toLower()', function() {
     expect('1,000,000.'.toLower()).toBe('1,000,000.');
   });
-})
+});
+
+describe('Test for ucFirst method', function() {
+  it('should return FirSt for "firSt".ucFirst()', function() {
+    expect('first'.ucFirst()).toBe('First');
+  });
+
+  it('should return Andela "Andela".ucFirst()', function() {
+    expect('Andela'.ucFirst()).toBe('Andela');
+  });
+
+  it('should return 12word "12word".ucFirst()', function() {
+    expect('12word'.ucFirst()).toBe('12word');
+  });
+}); 
