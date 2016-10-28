@@ -74,3 +74,14 @@ describe('Test for words method', function() {
       expect('It is working'.isQuestion()).toBe(['It', 'is', 'working']);
     });
 });
+
+describe('Test for wordCount method', function() {
+  it('should return 3 for "It is working".wordCount()', function() {
+    expect('It is working'.wordCount()).toBe(3);
+  });
+
+  it('should return 5 for "Wierdly    spaced     text   \
+    contains 87938".wordCount()',function() {
+      expect('Wierdly    spaced     text   contains 87938'.wordCount()).toBe(5);
+    });
+});
