@@ -119,3 +119,13 @@ describe('Test for inverseCase method', function() {
     expect('aNonymOuS'.inverseCase()).toBe('aNonymOuS');
   });
 });
+
+describe('Test for alternatingCase method', function() {
+  it('should return mR. bEN for "Onomatopoeia".alternatingCase()', function() {
+    expect('Onomatopoeia'.alternatingCase()).toBe('oNoMaToPoEiA');
+  });
+
+  it('should return iNtErEsTiNg for iNTErestIng.alternatingCase()', function() {
+    expect('iNTErestIng'.alternatingCase()).toBe('iNtErEsTiNg');
+  });
+});
