@@ -129,3 +129,13 @@ describe('Test for alternatingCase method', function() {
     expect('iNTErestIng'.alternatingCase()).toBe('iNtErEsTiNg');
   });
 });
+
+describe('Test for getMiddle method', function() {
+  it('should return ea for read.getMiddle()', function() {
+    expect('read'.getMiddle()).toBe('ea');
+  });
+
+  it('should return a for reads.getMiddle()', function() {
+    expect('reads'.getMiddle()).toBe('a');
+  });
+});
