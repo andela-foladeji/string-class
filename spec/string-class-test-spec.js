@@ -99,3 +99,13 @@ describe('Test for toCurrency method', function() {
     expect('1,000000'.toCurrency()).toBe('1,000,000');
   });
 });
+
+describe('Test for fromCurrency method', function() {
+  it('should return 11111.11 for 11,111.11.fromCurrency()', function() {
+    expect('11,111.11'.fromCurrency()).toBe(11111.11);
+  });
+
+  it('should return 1000000 for 1,000,000.fromCurrency()', function() {
+    expect('1,000,000'.fromCurrency()).toBe(1000000);
+  });
+});
