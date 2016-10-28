@@ -29,3 +29,17 @@ describe('Test for toUpper() method', function() {
     expect('123-456'.toUpper()).toBe('123-456');
   });
 });
+
+describe('Test for toLower() method', function() {
+  it('should return "this is" for "THIS IS".toLower()', function() {
+    expect('THIS IS'.toLower()).toBe('this is');
+  });
+
+  it('should return "already lower" for "already lower".toLower()', function() {
+    expect('already lower'.toLower()).toBe('already lower');
+  });
+
+  it('should return "1,000,000." for "1,000,000.".toLower()', function() {
+    expect('1,000,000.'.toLower()).toBe('1,000,000.');
+  });
+})
