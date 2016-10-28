@@ -85,3 +85,17 @@ describe('Test for wordCount method', function() {
       expect('Wierdly    spaced     text   contains 87938'.wordCount()).toBe(5);
     });
 });
+
+describe('Test for toCurrency method', function() {
+  it('should return 11,111.11 for 11111.11.toCurrency()', function() {
+    expect('11111.11'.toCurrency()).toBe('11,111.11');
+  });
+
+  it('should return 1,000,000 for 1000000.toCurrency()', function() {
+    expect('1000000'.toCurrency()).toBe('1,000,000');
+  });
+
+  it('should return 1,000,000 for 1,000000.toCurrency()', function() {
+    expect('1,000000'.toCurrency()).toBe('1,000,000');
+  });
+});
