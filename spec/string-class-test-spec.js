@@ -109,3 +109,13 @@ describe('Test for fromCurrency method', function() {
     expect('1,000,000'.fromCurrency()).toBe(1000000);
   });
 });
+
+describe('Test for inverseCase method', function() {
+  it('should return mR. bEN for "Mr. Ben".inverseCase()', function() {
+    expect('Mr. Ben'.inverseCase()).toBe('mR. bEN');
+  });
+
+  it('should return aNonymOuS for AnONYMoUs.inverseCase()', function() {
+    expect('aNonymOuS'.inverseCase()).toBe('aNonymOuS');
+  });
+});
