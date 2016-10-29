@@ -20,3 +20,7 @@ String.prototype.toLower = function() {
     return String.fromCharCode(found.charCodeAt(0) + 32);
   });
 };
+
+String.prototype.ucFirst = function() {
+  return this.replace(this.charAt(0), this.charAt(0).toUpper());
+}
