@@ -36,3 +36,7 @@ String.prototype.toLower = function() {
 String.prototype.ucFirst = function() {
   return this.replace(this.charAt(0), this.charAt(0).toUpper());
 }
+
+String.prototype.isQuestion = function() {
+  return /\?$/.test(this) ? true : false;
+};
