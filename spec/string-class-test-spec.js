@@ -9,6 +9,10 @@ describe('Test for hasVowels() method', () => {
     expect('word'.hasVowels()).toBe(true);
   });
 
+  it('should return true for cAp.hasVowels() was executed', () => {
+    expect('cAp'.hasVowels()).toBe(true);
+  });
+
   it('should return false if "78371038--- ".hasVowels() \
     was executed', () => {
       expect('78371038--- '.hasVowels()).toBe(false);
