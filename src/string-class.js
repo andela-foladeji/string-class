@@ -6,3 +6,10 @@
 String.prototype.hasVowels = function () {
   return /[aeiou]/i.test(this);
 };
+
+String.prototype.toUpper = function() {
+  return this.replace(/[a-z]/g, (found) => {
+    //makes use of ascii code
+    return String.fromCharCode(found.charCodeAt(0) - 32);
+  });
+};

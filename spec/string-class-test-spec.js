@@ -21,7 +21,7 @@ describe('Test for hasVowels() method', () => {
 
 describe('Test for toUpper() method', () => {
   it('should return ANDELA if anDelA.toUpper() was executed', () => {
-    expect('anDelA'.toUpper).toBe('ANDELA');
+    expect('anDelA'.toUpper()).toBe('ANDELA');
   });
 
   it('should return LOWER CASE for "lower case".toUpper() \
