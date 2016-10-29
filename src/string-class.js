@@ -13,3 +13,10 @@ String.prototype.toUpper = function() {
     return String.fromCharCode(found.charCodeAt(0) - 32);
   });
 };
+
+String.prototype.toLower = function() {
+  return this.replace(/[A-Z]/g, (found) => {
+    //makes use of ascii code
+    return String.fromCharCode(found.charCodeAt(0) + 32);
+  });
+};
