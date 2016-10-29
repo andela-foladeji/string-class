@@ -1,175 +1,175 @@
 'use strict';
 
-describe('Test for hasVowels() method', function() {
-  it('should return false if dfhgjl.hasVowels() was executed', function() {
+describe('Test for hasVowels() method', () => {
+  it('should return false if dfhgjl.hasVowels() was executed', () => {
     expect('dfhgjl'.hasVowels()).toBe(false);
   });
 
-  it('should return true if word.hasVowels() was executed', function() {
+  it('should return true if word.hasVowels() was executed', () => {
     expect('word'.hasVowels()).toBe(true);
   });
 
   it('should return false if "78371038--- ".hasVowels() \
-    was executed', function() {
+    was executed', () => {
       expect('78371038--- '.hasVowels()).toBe(false);
     });
 });
 
-describe('Test for toUpper() method', function() {
-  it('should return ANDELA if anDelA.toUpper() was executed', function() {
+describe('Test for toUpper() method', () => {
+  it('should return ANDELA if anDelA.toUpper() was executed', () => {
     expect('anDelA'.toUpper).toBe('ANDELA');
   });
 
   it('should return LOWER CASE for "lower case".toUpper() \
-    was executed', function() {
+    was executed', () => {
       expect('lower case'.toUpper()).toBe('LOWER CASE');
   });
 
-  it('should return 123-456 for 123-456.toUpper()', function() {
+  it('should return 123-456 for 123-456.toUpper()', () => {
     expect('123-456'.toUpper()).toBe('123-456');
   });
 });
 
-describe('Test for toLower() method', function() {
-  it('should return "this is" for "THIS IS".toLower()', function() {
+describe('Test for toLower() method', () => {
+  it('should return "this is" for "THIS IS".toLower()', () => {
     expect('THIS IS'.toLower()).toBe('this is');
   });
 
-  it('should return "already lower" for "already lower".toLower()', function() {
+  it('should return "already lower" for "already lower".toLower()', () => {
     expect('already lower'.toLower()).toBe('already lower');
   });
 
-  it('should return "1,000,000." for "1,000,000.".toLower()', function() {
+  it('should return "1,000,000." for "1,000,000.".toLower()', () => {
     expect('1,000,000.'.toLower()).toBe('1,000,000.');
   });
 });
 
-describe('Test for ucFirst method', function() {
-  it('should return FirSt for "firSt".ucFirst()', function() {
+describe('Test for ucFirst method', () => {
+  it('should return FirSt for "firSt".ucFirst()', () => {
     expect('first'.ucFirst()).toBe('First');
   });
 
-  it('should return Andela "Andela".ucFirst()', function() {
+  it('should return Andela "Andela".ucFirst()', () => {
     expect('Andela'.ucFirst()).toBe('Andela');
   });
 
-  it('should return 12word "12word".ucFirst()', function() {
+  it('should return 12word "12word".ucFirst()', () => {
     expect('12word'.ucFirst()).toBe('12word');
   });
 });
 
-describe('Test for isQuestion method', function() {
-  it('should return true for "Is this a question?".isQuestion()', function() {
+describe('Test for isQuestion method', () => {
+  it('should return true for "Is this a question?".isQuestion()', () => {
     expect('Is this a question?'.isQuestion()).toBe(true);
   });
 
-  it('should return false for "Is this a ? question".isQuestion()', function() {
+  it('should return false for "Is this a ? question".isQuestion()', () => {
     expect('Is this a ? question'.isQuestion()).toBe(false);
   });
 });
 
-describe('Test for words method', function() {
+describe('Test for words method', () => {
   it('should return an array of the list of words ["It", "is", "working"]\
-    for "It is working".words()', function() {
+    for "It is working".words()', () => {
       expect('It is working'.isQuestion()).toBe(['It', 'is', 'working']);
     });
 });
 
-describe('Test for wordCount method', function() {
-  it('should return 3 for "It is working".wordCount()', function() {
+describe('Test for wordCount method', () => {
+  it('should return 3 for "It is working".wordCount()', () => {
     expect('It is working'.wordCount()).toBe(3);
   });
 
   it('should return 5 for "Wierdly    spaced     text   \
-    contains 87938".wordCount()',function() {
+    contains 87938".wordCount()',() => {
       expect('Wierdly    spaced     text   contains 87938'.wordCount()).toBe(5);
     });
 });
 
-describe('Test for toCurrency method', function() {
-  it('should return 11,111.11 for 11111.11.toCurrency()', function() {
+describe('Test for toCurrency method', () => {
+  it('should return 11,111.11 for 11111.11.toCurrency()', () => {
     expect('11111.11'.toCurrency()).toBe('11,111.11');
   });
 
-  it('should return 1,000,000 for 1000000.toCurrency()', function() {
+  it('should return 1,000,000 for 1000000.toCurrency()', () => {
     expect('1000000'.toCurrency()).toBe('1,000,000');
   });
 
-  it('should return 1,000,000 for 1,000000.toCurrency()', function() {
+  it('should return 1,000,000 for 1,000000.toCurrency()', () => {
     expect('1,000000'.toCurrency()).toBe('1,000,000');
   });
 });
 
-describe('Test for fromCurrency method', function() {
-  it('should return 11111.11 for 11,111.11.fromCurrency()', function() {
+describe('Test for fromCurrency method', () => {
+  it('should return 11111.11 for 11,111.11.fromCurrency()', () => {
     expect('11,111.11'.fromCurrency()).toBe(11111.11);
   });
 
-  it('should return 1000000 for 1,000,000.fromCurrency()', function() {
+  it('should return 1000000 for 1,000,000.fromCurrency()', () => {
     expect('1,000,000'.fromCurrency()).toBe(1000000);
   });
 });
 
-describe('Test for inverseCase method', function() {
-  it('should return mR. bEN for "Mr. Ben".inverseCase()', function() {
+describe('Test for inverseCase method', () => {
+  it('should return mR. bEN for "Mr. Ben".inverseCase()', () => {
     expect('Mr. Ben'.inverseCase()).toBe('mR. bEN');
   });
 
-  it('should return aNonymOuS for AnONYMoUs.inverseCase()', function() {
+  it('should return aNonymOuS for AnONYMoUs.inverseCase()', () => {
     expect('aNonymOuS'.inverseCase()).toBe('aNonymOuS');
   });
 });
 
-describe('Test for alternatingCase method', function() {
-  it('should return mR. bEN for "Onomatopoeia".alternatingCase()', function() {
+describe('Test for alternatingCase method', () => {
+  it('should return mR. bEN for "Onomatopoeia".alternatingCase()', () => {
     expect('Onomatopoeia'.alternatingCase()).toBe('oNoMaToPoEiA');
   });
 
-  it('should return iNtErEsTiNg for iNTErestIng.alternatingCase()', function() {
+  it('should return iNtErEsTiNg for iNTErestIng.alternatingCase()', () => {
     expect('iNTErestIng'.alternatingCase()).toBe('iNtErEsTiNg');
   });
 });
 
-describe('Test for getMiddle method', function() {
-  it('should return ea for read.getMiddle()', function() {
+describe('Test for getMiddle method', () => {
+  it('should return ea for read.getMiddle()', () => {
     expect('read'.getMiddle()).toBe('ea');
   });
 
-  it('should return a for reads.getMiddle()', function() {
+  it('should return a for reads.getMiddle()', () => {
     expect('reads'.getMiddle()).toBe('a');
   });
 });
 
-describe('Test for numberWords method', function() {
-  it('should return three two five for 325.numberWords()', function() {
+describe('Test for numberWords method', () => {
+  it('should return three two five for 325.numberWords()', () => {
     expect('325'.numberWords()).toBe('three two five');
   });
 
-  it('should return one zero zero zero for 1,000.numberWords()', function() {
+  it('should return one zero zero zero for 1,000.numberWords()', () => {
     expect('1,000'.numberWords()).toBe('one zero zero zero');
   });
 });
 
-describe('Test for isDigit method', function() {
-  it('should return true for 3', function() {
+describe('Test for isDigit method', () => {
+  it('should return true for 3', () => {
     expect('3'.isDigit()).toBe(true);
   });
 
-  it('should return return false for 34', function() {
+  it('should return return false for 34', () => {
     expect('45'.isDigit()).toBe(false);
   });
 });
 
-describe('Test for doubleCheck method', function() {
-  it('should return true for aagjglkdk.doubleCheck()', function() {
+describe('Test for doubleCheck method', () => {
+  it('should return true for aagjglkdk.doubleCheck()', () => {
     expect('aagjglkdk'.doubleCheck()).toBe(true);
   });
 
-  it('should return true for spaced  twice', function() {
+  it('should return true for spaced  twice', () => {
     expect('spaced  twice'.doubleCheck()).toBe(true);
   });
 
-  it('should return false for nothing', function() {
+  it('should return false for nothing', () => {
     expect('nothing'.doubleCheck()).toBe(false);
   });
 });
