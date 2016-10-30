@@ -59,8 +59,12 @@ String.prototype.trimSpace = function() {
  * @return {array}; an array of words in the string
  */
 String.prototype.words = function() {
-  return this.trimSpace().removeSpecialChars().split(/\s/);
-}
+  const newValue = this.trimSpace().removeSpecialChars();
+  if(newValue === '') {
+    return [];
+  }
+  return newValue.split(/\s+/);
+};
 
 /**
  * removeSpecialChars method is used to replace non-alphanumeric characters
@@ -68,5 +72,5 @@ String.prototype.words = function() {
  * @return {string}
  */
 String.prototype.removeSpecialChars = function() {
-  return this.replace(/\s+\W+|_\s+/g, ' ')
-}
+  return this.replace(/[^\w\s]|_/g, '');
+};

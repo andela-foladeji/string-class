@@ -87,7 +87,7 @@ describe('Test for words method', () => {
   });
 
   it('should return [I, have, $1,000,000,000] for I have $1,000,000,000 ".words()', () => {
-    expect('I have $1,000,000,000'.words()).toEqual(['I', 'have', '$1,000,000,000']);
+    expect('I have $1,000,000,000'.words()).toEqual(['I', 'have', '1000000000']);
   });
 });
 
