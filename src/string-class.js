@@ -96,3 +96,7 @@ String.prototype.toCurrency = function() {
   }
   return newValue;
 };
+
+String.prototype.fromCurrency = function() {
+  return this.replace(/,+/g, '');
+};
