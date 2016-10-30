@@ -37,6 +37,14 @@ String.prototype.ucFirst = function() {
   return this.replace(this.charAt(0), this.charAt(0).toUpper());
 }
 
+/**
+ * isQuestion method checks if a string is a question by
+ * checking if the last character is a question mark ?
+*/
 String.prototype.isQuestion = function() {
-  return /\?$/.test(this) ? true : false;
+  return /\?$/.test(this.trimSpace()) ? true : false;
 };
+
+String.prototype.trimSpace = function() {
+  return this.replace(/^\s+|\s+$/g, '');
+}
