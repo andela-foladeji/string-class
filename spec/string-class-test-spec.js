@@ -70,6 +70,10 @@ describe('Test for isQuestion method', () => {
   it('should return false for "Is this a ? question".isQuestion()', () => {
     expect('Is this a ? question'.isQuestion()).toBe(false);
   });
+
+  it('should return true for "What?      ".isQuestion()', () => {
+    expect('What?      '.isQuestion()).toBe(true);
+  });
 });
 
 describe('Test for words method', () => {
