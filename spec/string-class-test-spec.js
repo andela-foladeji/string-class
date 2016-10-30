@@ -81,6 +81,14 @@ describe('Test for words method', () => {
     for "It is working".words()', () => {
       expect('It is working'.words()).toEqual(['It', 'is', 'working']);
     });
+
+  it('should return [] for "     ".words()', () => {
+    expect('     '.words()).toEqual([]);
+  });
+
+  it('should return [I, have, $1,000,000,000] for I have $1,000,000,000 ".words()', () => {
+    expect('I have $1,000,000,000'.words()).toEqual(['I', 'have', '$1,000,000,000']);
+  });
 });
 
 describe('Test for wordCount method', () => {
