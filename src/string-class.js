@@ -52,4 +52,21 @@ String.prototype.isQuestion = function() {
  */
 String.prototype.trimSpace = function() {
   return this.replace(/^\s+|\s+$/g, '');
+};
+
+/**
+ * words method gets all the words in a string
+ * @return {array}; an array of words in the string
+ */
+String.prototype.words = function() {
+  return this.trimSpace().removeSpecialChars().split(/\s/);
+}
+
+/**
+ * removeSpecialChars method is used to replace non-alphanumeric characters
+ * including _ that are alone and replaces it with empty space
+ * @return {string}
+ */
+String.prototype.removeSpecialChars = function() {
+  return this.replace(/\s+\W+|_\s+/g, ' ')
 }

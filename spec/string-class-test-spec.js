@@ -79,7 +79,7 @@ describe('Test for isQuestion method', () => {
 describe('Test for words method', () => {
   it('should return an array of the list of words ["It", "is", "working"]\
     for "It is working".words()', () => {
-      expect('It is working'.isQuestion()).toBe(['It', 'is', 'working']);
+      expect('It is working'.words()).toEqual(['It', 'is', 'working']);
     });
 });
 
