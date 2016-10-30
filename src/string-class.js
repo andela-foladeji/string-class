@@ -78,3 +78,21 @@ String.prototype.removeSpecialChars = function() {
 String.prototype.wordCount = function() {
   return this.words().length;
 };
+
+String.prototype.toCurrency = function() {
+  var parts = this.split(/[.]/g),
+      length = parts[0].length,
+      newValue = '';
+  var firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
+  for(let i = 0; i < length; i++) {
+    if(firstCommaPos === i){
+      newValue += ',';
+      firstCommaPos += 3;
+    }
+    newValue += parts[0][i];
+  }
+  if(parts[1]) {
+    return newValue+'.'+parts[1];
+  }
+  return newValue;
+};

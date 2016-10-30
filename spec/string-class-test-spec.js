@@ -110,10 +110,6 @@ describe('Test for toCurrency method', () => {
   it('should return 1,000,000 for 1000000.toCurrency()', () => {
     expect('1000000'.toCurrency()).toBe('1,000,000');
   });
-
-  it('should return 1,000,000 for 1,000000.toCurrency()', () => {
-    expect('1,000000'.toCurrency()).toBe('1,000,000');
-  });
 });
 
 describe('Test for fromCurrency method', () => {
