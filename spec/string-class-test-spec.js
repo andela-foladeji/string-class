@@ -128,7 +128,7 @@ describe('Test for inverseCase method', () => {
   });
 
   it('should return aNonymOuS for AnONYMoUs.inverseCase()', () => {
-    expect('aNonymOuS'.inverseCase()).toBe('aNonymOuS');
+    expect('AnONYMoUs'.inverseCase()).toBe('aNonymOuS');
   });
 });
 

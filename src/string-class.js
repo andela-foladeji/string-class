@@ -100,3 +100,9 @@ String.prototype.toCurrency = function() {
 String.prototype.fromCurrency = function() {
   return this.replace(/,+/g, '');
 };
+
+String.prototype.inverseCase = function() {
+	return this.replace(/[a-zA-Z]/g, (match) => {
+		return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
+	});
+}
