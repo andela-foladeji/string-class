@@ -74,3 +74,7 @@ String.prototype.words = function() {
 String.prototype.removeSpecialChars = function() {
   return this.replace(/[^\w\s]|_/g, '');
 };
+
+String.prototype.wordCount = function() {
+  return this.words().length;
+};
