@@ -40,11 +40,16 @@ String.prototype.ucFirst = function() {
 /**
  * isQuestion method checks if a string is a question by
  * checking if the last character is a question mark ?
-*/
+ * @return {boolean}; true if the string is a question and false otherwise
+ */
 String.prototype.isQuestion = function() {
   return /\?$/.test(this.trimSpace()) ? true : false;
 };
 
+/**
+ * trimSpace method removes the trailing and preceeding empty spaces in a string
+ * @return {string}; trimmed string
+ */
 String.prototype.trimSpace = function() {
   return this.replace(/^\s+|\s+$/g, '');
 }
