@@ -75,10 +75,19 @@ String.prototype.removeSpecialChars = function() {
   return this.replace(/[^\w\s]|_/g, '');
 };
 
+
+/**
+ * wordCount method counts the number of words in a string
+ * @return {int}: number of words
+ */
 String.prototype.wordCount = function() {
   return this.words().length;
 };
 
+/**
+ * toCurrency method formats a number by putting commas in the right place
+ * @return {string}: string representing the currency format
+ */
 String.prototype.toCurrency = function() {
   var parts = this.split(/[.]/g),
       length = parts[0].length,
@@ -97,16 +106,30 @@ String.prototype.toCurrency = function() {
   return newValue;
 };
 
+/**
+ * fromCurrency format converts a string in the currency format by
+ * removing commas
+ * @return {string}: representing the pure digit format
+ */
 String.prototype.fromCurrency = function() {
   return this.replace(/,+/g, '');
 };
 
+/**
+ * inverseCase inverts the case of a character, a lower case character
+ * becomes upper case
+ * @return {string}: a string with inverted case
+ */
 String.prototype.inverseCase = function() {
 	return this.replace(/[a-zA-Z]/g, (match) => {
 		return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
 	});
 };
 
+/**
+ * alternatingCase method alternates the case of the character in a string
+ * @return {string}; with alternated cases e.g aNoNyMoUs
+ */
 String.prototype.alternatingCase = function() {
   return this.replace(/[A-Za-z]/g, (match, index) => {
     return (index % 2 === 0) ? match.toLower() : match.toUpper();
