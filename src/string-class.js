@@ -105,4 +105,10 @@ String.prototype.inverseCase = function() {
 	return this.replace(/[a-zA-Z]/g, (match) => {
 		return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
 	});
-}
+};
+
+String.prototype.alternatingCase = function() {
+  return this.replace(/[A-Za-z]/g, (match, index) => {
+    return (index % 2 === 0) ? match.toLower() : match.toUpper();
+  });
+};

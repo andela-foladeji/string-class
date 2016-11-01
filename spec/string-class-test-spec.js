@@ -133,7 +133,7 @@ describe('Test for inverseCase method', () => {
 });
 
 describe('Test for alternatingCase method', () => {
-  it('should return mR. bEN for "Onomatopoeia".alternatingCase()', () => {
+  it('should return oNoMaToPoEiA for "Onomatopoeia".alternatingCase()', () => {
     expect('Onomatopoeia'.alternatingCase()).toBe('oNoMaToPoEiA');
   });
 
