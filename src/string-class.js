@@ -135,3 +135,16 @@ String.prototype.alternatingCase = function() {
     return (index % 2 === 0) ? match.toLower() : match.toUpper();
   });
 };
+
+/**
+ * getMiddle method returns the character or the two characters at the mid
+ * position in a string
+ * @return {string}; of the middle character or two characters in the string
+ */
+ String.prototype.getMiddle = function() {
+  const length = this.length;
+  if(length % 2 === 0) {
+    return this[(length / 2) - 1] + this[length / 2];
+  }
+  return this[parseInt(length / 2)];
+ };
