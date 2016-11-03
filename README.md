@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-foladeji/string-class.svg)](https://travis-ci.org/andela-foladeji/string-class)
-[![Coverage Status](https://coveralls.io/repos/github/andela-foladeji/string-class/badge.svg)](https://coveralls.io/repos/github/andela-foladeji/string-class/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/andela-foladeji/string-class/badge.svg?branch=develop)](https://coveralls.io/github/andela-foladeji/string-class?branch=develop)
 [![Code Climate](https://codeclimate.com/github/andela-foladeji/string-class/badges/gpa.svg)](https://codeclimate.com/github/andela-foladeji/string-class)
 
 # String Class
