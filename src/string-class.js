@@ -175,3 +175,12 @@ String.prototype.alternatingCase = function() {
       return ' ' + digitInWords[match];
     });
   };
+
+  /**
+   * isDigit method returns true if the string is just
+   * a single digit
+   * @return {boolean}
+   */
+  String.prototype.isDigit = function() {
+    return /^\d$/g.test(this);
+  };
