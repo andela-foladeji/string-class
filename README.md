@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/andela-foladeji/string-class.svg)](https://travis-ci.org/andela-foladeji/string-class)
 [![Coverage Status](https://coveralls.io/repos/github/andela-foladeji/string-class/badge.svg)](https://coveralls.io/repos/github/andela-foladeji/string-class/badge.svg)
+[![Code Climate](https://codeclimate.com/github/andela-foladeji/string-class/badges/gpa.svg)](https://codeclimate.com/github/andela-foladeji/string-class)
 
 # String Class
 An extension to javascript String's class for more string manipulations.
