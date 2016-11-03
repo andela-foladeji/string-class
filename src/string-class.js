@@ -185,6 +185,11 @@ String.prototype.alternatingCase = function() {
     return /^\d$/g.test(this);
   };
 
+  /**
+   * doubleCheck method returns true if the same 
+   * character follows each other  and false otherwise
+   * @return {boolean}
+   */
   String.prototype.doubleCheck = function() {
     return /(.)\1/.test(this);
   };
