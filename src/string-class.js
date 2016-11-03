@@ -35,7 +35,7 @@ String.prototype.toLower = function() {
  */
 String.prototype.ucFirst = function() {
   return this.replace(this.charAt(0), this.charAt(0).toUpper());
-}
+};
 
 /**
  * isQuestion method checks if a string is a question by
@@ -89,10 +89,10 @@ String.prototype.wordCount = function() {
  * @return {string}: string representing the currency format
  */
 String.prototype.toCurrency = function() {
-  var parts = this.split(/[.]/g),
-      length = parts[0].length,
-      newValue = '';
-  var firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
+  let parts = this.split(/[.]/g),
+    length = parts[0].length,
+    newValue = '';
+  let firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
   for(let i = 0; i < length; i++) {
     if(firstCommaPos === i){
       newValue += ',';
@@ -121,9 +121,9 @@ String.prototype.fromCurrency = function() {
  * @return {string}: a string with inverted case
  */
 String.prototype.inverseCase = function() {
-	return this.replace(/[a-zA-Z]/g, (match) => {
-		return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
-	});
+  return this.replace(/[a-zA-Z]/g, (match) => {
+    return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
+  });
 };
 
 /**
@@ -141,55 +141,55 @@ String.prototype.alternatingCase = function() {
  * position in a string
  * @return {string}; of the middle character or two characters in the string
  */
- String.prototype.getMiddle = function() {
+String.prototype.getMiddle = function() {
   const length = this.length;
   if(length % 2 === 0) {
     return this[(length / 2) - 1] + this[length / 2];
   }
   return this[parseInt(length / 2)];
- };
+};
 
  /**
   * numberWords returns the word equivalent for the digits
   * @return {string}; word equivalent for every digit
   */
 
-  String.prototype.numberWords = function() {
-    const digitInWords = {
-      0: 'zero',
-      1: 'one',
-      2: 'two',
-      3: 'three',
-      4: 'four',
-      5: 'five',
-      6: 'six',
-      7: 'seven',
-      8: 'eight',
-      9: 'nine'
-    };
-
-    return this.replace(/\d/g, (match, index) => {
-      if(index === 0) {
-        return digitInWords[match];
-      }
-      return ' ' + digitInWords[match];
-    });
+String.prototype.numberWords = function() {
+  const digitInWords = {
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six',
+    7: 'seven',
+    8: 'eight',
+    9: 'nine'
   };
 
-  /**
-   * isDigit method returns true if the string is just
-   * a single digit
-   * @return {boolean}
-   */
-  String.prototype.isDigit = function() {
-    return /^\d$/g.test(this);
-  };
+  return this.replace(/\d/g, (match, index) => {
+    if(index === 0) {
+      return digitInWords[match];
+    }
+    return ' ' + digitInWords[match];
+  });
+};
 
-  /**
-   * doubleCheck method returns true if the same 
-   * character follows each other  and false otherwise
-   * @return {boolean}
-   */
-  String.prototype.doubleCheck = function() {
-    return /(.)\1/.test(this);
-  };
+/**
+ * isDigit method returns true if the string is just
+ * a single digit
+ * @return {boolean}
+ */
+String.prototype.isDigit = function() {
+  return /^\d$/g.test(this);
+};
+
+/**
+ * doubleCheck method returns true if the same 
+ * character follows each other  and false otherwise
+ * @return {boolean}
+ */
+String.prototype.doubleCheck = function() {
+  return /(.)\1/.test(this);
+};
