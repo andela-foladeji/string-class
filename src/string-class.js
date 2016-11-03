@@ -148,3 +148,30 @@ String.prototype.alternatingCase = function() {
   }
   return this[parseInt(length / 2)];
  };
+
+ /**
+  * numberWords returns the word equivalent for the digits
+  * @return {string}; word equivalent for every digit
+  */
+
+  String.prototype.numberWords = function() {
+    const digitInWords = {
+      0: 'zero',
+      1: 'one',
+      2: 'two',
+      3: 'three',
+      4: 'four',
+      5: 'five',
+      6: 'six',
+      7: 'seven',
+      8: 'eight',
+      9: 'nine'
+    };
+
+    return this.replace(/\d/g, (match, index) => {
+      if(index === 0) {
+        return digitInWords[match];
+      }
+      return ' ' + digitInWords[match];
+    });
+  };

@@ -158,7 +158,7 @@ describe('Test for numberWords method', () => {
   });
 
   it('should return one zero zero zero for 1,000.numberWords()', () => {
-    expect('1,000'.numberWords()).toBe('one zero zero zero');
+    expect('1,000'.numberWords()).toBe('one, zero zero zero');
   });
 });
 
