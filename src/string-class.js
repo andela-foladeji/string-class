@@ -184,3 +184,7 @@ String.prototype.alternatingCase = function() {
   String.prototype.isDigit = function() {
     return /^\d$/g.test(this);
   };
+
+  String.prototype.doubleCheck = function() {
+    return /(.)\1/.test(this);
+  };
