@@ -90,9 +90,9 @@ describe('Test for words method', () => {
 
   it('should return [I, have, $1,000,000,000] for \
     I have $1,000,000,000 ".words()', () => {
-      assert.deepEqual('I have $1,000,000,000'.words(),
-        ['I', 'have', '1000000000']);
-    });
+    assert.deepEqual('I have $1,000,000,000'.words(),
+      ['I', 'have', '1000000000']);
+  });
 });
 
 describe('Test for wordCount method', () => {
