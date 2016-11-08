@@ -115,6 +115,9 @@ describe('Test for toCurrency method', () => {
   it('should return 1,000,000 for 1000000.toCurrency()', () => {
     assert.equal('1000000'.toCurrency(), '1,000,000');
   });
+  it('should return 911,234,567 for 911234567.toCurrency()', () => {
+    assert.equal('911234567'.toCurrency(), '911,234,567');
+  });
 });
 
 describe('Test for fromCurrency method', () => {
