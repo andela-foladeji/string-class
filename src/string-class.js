@@ -95,17 +95,16 @@ const stringManipulations = {
       length = parts[0].length,
       newValue = '';
     let firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
-    for(let i = 0; i < length; i++) {
-      if(firstCommaPos === i){
-        newValue += ',';
-        firstCommaPos += 3;
-      }
-      newValue += parts[0][i];
-    }
+    const re = new RegExp('^[0-9]{'+firstCommaPos+'}|[0-9]{3}', "g");
+    parts[0] = parts[0].replace(re, (number) => {
+      return `${number},`;
+    })
+    .replace(/,$/, '');
+    
     if(parts[1]) {
-      return newValue+'.'+parts[1];
+      return parts[0]+'.'+parts[1];
     }
-    return newValue;
+    return parts[0];
   },
 
   /**
