@@ -102,9 +102,9 @@ const stringManipulations = {
     .replace(/,$/, '');
     
     if(parts[1]) {
-      return parts[0]+'.'+parts[1];
+      return `${parts[0]}.${parts[1]}`;
     }
-    return parts[0];
+    return `${parts[0]}.00`;
   },
 
   /**
