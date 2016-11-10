@@ -45,7 +45,7 @@ const stringManipulations = {
    * @return {boolean}; true if the string is a question and false otherwise
    */
   isQuestion() {
-    return /\?$/.test(this.trimSpace()) ? true : false;
+    return /\?$/.test(this.trimSpace());
   },
 
   /**
@@ -94,7 +94,7 @@ const stringManipulations = {
   toCurrency() {
     const parts = this.split(/[.]/g),
       length = parts[0].length;
-    let firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
+    const firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
     const re = new RegExp('^[0-9]{'+firstCommaPos+'}|[0-9]{3}', 'g');
     parts[0] = parts[0].replace(re, (number) => {
       return `${number},`;
@@ -171,7 +171,7 @@ const stringManipulations = {
       if(index === 0) {
         return digitInWords[match];
       }
-      return ' ' + digitInWords[match];
+      return ` ${digitInWords[match]}`;
     });
   },
 
