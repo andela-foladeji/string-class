@@ -154,7 +154,6 @@ const stringManipulations = {
     * numberWords returns the word equivalent for the digits
     * @return {string}; word equivalent for every digit
     */
-
   numberWords() {
     const digitInWords = {
       0: 'zero',
@@ -168,7 +167,6 @@ const stringManipulations = {
       8: 'eight',
       9: 'nine'
     };
-
     return this.replace(/\d/g, (match, index) => {
       if(index === 0) {
         return digitInWords[match];
