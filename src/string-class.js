@@ -49,7 +49,8 @@ const stringManipulations = {
   },
 
   /**
-   * trimSpace method removes the trailing and preceeding empty spaces in a string
+   * trimSpace method removes the trailing and preceeding empty 
+   * spaces in a string
    * @return {string}; trimmed string
    */
   trimSpace() {
@@ -95,7 +96,7 @@ const stringManipulations = {
       length = parts[0].length,
       newValue = '';
     let firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
-    const re = new RegExp('^[0-9]{'+firstCommaPos+'}|[0-9]{3}', "g");
+    const re = new RegExp('^[0-9]{'+firstCommaPos+'}|[0-9]{3}', 'g');
     parts[0] = parts[0].replace(re, (number) => {
       return `${number},`;
     })
@@ -194,6 +195,6 @@ const stringManipulations = {
   doubleCheck() {
     return /(.)\1/.test(this);
   },
-}
+};
 
 Object.assign(String.prototype, stringManipulations);
