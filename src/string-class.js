@@ -93,11 +93,10 @@ const stringManipulations = {
       length = parts[0].length;
     const firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
     const regExpression =
-    new RegExp('^[0-9]{' + firstCommaPos + '}|[0-9]{3}', 'g');
+    new RegExp('^[0-9]{' + firstCommaPos + '}|[0-9]{3}(?!$)', 'g');
     parts[0] = parts[0].replace(regExpression, (number) => {
       return `${number},`;
     })
-    .replace(/,$/, '');
     return parts[1] ? `${parts[0]}.${parts[1]}` : `${parts[0]}.00`;
   },
 
