@@ -91,9 +91,10 @@ const stringManipulations = {
   toCurrency() {
     const parts = this.split(/[.]/g),
       length = parts[0].length;
-    const firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
+    let firstCommaPosition = length % 3;
+    firstCommaPosition = (firstCommaPosition === 0) ? 3 : firstCommaPosition;
     const regExpression =
-    new RegExp('^[0-9]{' + firstCommaPos + '}|[0-9]{3}(?!$)', 'g');
+    new RegExp('^[0-9]{' + firstCommaPosition + '}|[0-9]{3}(?!$)', 'g');
     parts[0] = parts[0].replace(regExpression, (number) => {
       return `${number},`;
     });
@@ -137,10 +138,8 @@ const stringManipulations = {
    */
   getMiddle() {
     const length = this.length;
-    if(length % 2 === 0) {
-      return this[(length / 2) - 1] + this[length / 2];
-    }
-    return this[parseInt(length / 2)];
+    const mid = parseInt(length / 2);
+    return (length % 2 === 0) ? this[mid - 1] + this[mid]: this[mid];
   },
 
   /**
