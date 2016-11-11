@@ -2,7 +2,7 @@
 const assert = require('assert');
 require('../src/string-class');
 
-describe('Test for hasVowels() method', () => {
+describe('Test for hasVowels method', () => {
   it('should return false for words without vowels', () => {
     assert.equal('dfhgjl'.hasVowels(), false);
   });
@@ -18,7 +18,7 @@ describe('Test for hasVowels() method', () => {
   });
 });
 
-describe('Test for toUpper() method', () => {
+describe('Test for toUpper method', () => {
   it('should transform any lower case to uppercase while' +
   'leaving the uppercase', () => {
     assert.equal('anDelA'.toUpper(), 'ANDELA');
@@ -32,7 +32,7 @@ describe('Test for toUpper() method', () => {
   });
 });
 
-describe('Test for toLower() method', () => {
+describe('Test for toLower method', () => {
   it('should return lower case characters', () => {
     assert.equal('THIS IS'.toLower(), 'this is');
   });
