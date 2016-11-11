@@ -63,10 +63,7 @@ const stringManipulations = {
    */
   words() {
     const newValue = this.trimSpace().removeSpecialChars();
-    if(newValue === '') {
-      return [];
-    }
-    return newValue.split(/\s+/);
+    return newValue === '' ? [] :  newValue.split(/\s+/);
   },
 
   /**
@@ -95,16 +92,13 @@ const stringManipulations = {
     const parts = this.split(/[.]/g),
       length = parts[0].length;
     const firstCommaPos = (length % 3 === 0) ? 3 : length % 3;
-    const re = new RegExp('^[0-9]{'+firstCommaPos+'}|[0-9]{3}', 'g');
-    parts[0] = parts[0].replace(re, (number) => {
+    const regExpression =
+    new RegExp('^[0-9]{' + firstCommaPos + '}|[0-9]{3}', 'g');
+    parts[0] = parts[0].replace(regExpression, (number) => {
       return `${number},`;
     })
     .replace(/,$/, '');
-    
-    if(parts[1]) {
-      return `${parts[0]}.${parts[1]}`;
-    }
-    return `${parts[0]}.00`;
+    return parts[1] ? `${parts[0]}.${parts[1]}` : `${parts[0]}.00`;
   },
 
   /**
