@@ -1,4 +1,8 @@
+/* eslint-disable strict */
+
 'use strict';
+
+/* eslint-enable strict */
 
 const stringManipulations = {
   /**
@@ -14,10 +18,10 @@ const stringManipulations = {
    * @return {string}, a string with upper case characters
    */
   toUpper() {
-    return this.replace(/[a-z]/g, (found) => {
-      //makes use of ascii code
-      return String.fromCharCode(found.charCodeAt(0) - 32);
-    });
+    return this.replace(/[a-z]/g, found =>
+      // makes use of ascii code
+      String.fromCharCode(found.charCodeAt(0) - 32)
+    );
   },
 
   /**
@@ -25,10 +29,10 @@ const stringManipulations = {
    * @return {string}, a string with lower case characters
    */
   toLower() {
-    return this.replace(/[A-Z]/g, (found) => {
-      //makes use of ascii code
-      return String.fromCharCode(found.charCodeAt(0) + 32);
-    });
+    return this.replace(/[A-Z]/g, found =>
+      // makes use of ascii code
+      String.fromCharCode(found.charCodeAt(0) + 32)
+    );
   },
 
   /**
@@ -49,7 +53,7 @@ const stringManipulations = {
   },
 
   /**
-   * trimSpace method removes the trailing and preceeding empty 
+   * trimSpace method removes the trailing and preceeding empty
    * spaces in a string
    * @return {string}; trimmed string
    */
@@ -63,13 +67,13 @@ const stringManipulations = {
    */
   words() {
     const newValue = this.trimSpace().removeSpecialChars();
-    return newValue === '' ? [] :  newValue.split(/\s+/);
+    return newValue === '' ? [] : newValue.split(/\s+/);
   },
 
   /**
    * removeSpecialChars method is used to replace non-alphanumeric characters
    * including _ that are alone and replaces it with empty space
-   * @return {string}
+   * @return {string}:
    */
   removeSpecialChars() {
     return this.replace(/[^\w\s]|_/g, '');
@@ -93,11 +97,13 @@ const stringManipulations = {
       length = parts[0].length;
     let firstCommaPosition = length % 3;
     firstCommaPosition = (firstCommaPosition === 0) ? 3 : firstCommaPosition;
+    /* eslint-disable prefer-template */
     const regExpression =
     new RegExp('^[0-9]{' + firstCommaPosition + '}|[0-9]{3}(?!$)', 'g');
-    parts[0] = parts[0].replace(regExpression, (number) => {
-      return `${number},`;
-    });
+    /* eslint-enable prefer-template */
+    parts[0] = parts[0].replace(regExpression, number =>
+      `${number},`
+    );
     return parts[1] ? `${parts[0]}.${parts[1]}` : `${parts[0]}.00`;
   },
 
@@ -117,7 +123,8 @@ const stringManipulations = {
    */
   inverseCase() {
     return this.replace(/[a-zA-Z]/g, (match) => {
-      return /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
+      const answer = /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
+      return answer;
     });
   },
 
@@ -127,7 +134,8 @@ const stringManipulations = {
    */
   alternatingCase() {
     return this.replace(/[A-Za-z]/g, (match, index) => {
-      return (index % 2 === 0) ? match.toLower() : match.toUpper();
+      const answer = (index % 2 === 0) ? match.toLower() : match.toUpper();
+      return answer;
     });
   },
 
@@ -138,8 +146,8 @@ const stringManipulations = {
    */
   getMiddle() {
     const length = this.length;
-    const mid = parseInt(length / 2);
-    return (length % 2 === 0) ? this[mid - 1] + this[mid]: this[mid];
+    const mid = parseInt(length / 2, 10);
+    return (length % 2 === 0) ? this[mid - 1] + this[mid] : this[mid];
   },
 
   /**
@@ -160,7 +168,7 @@ const stringManipulations = {
       9: 'nine'
     };
     return this.replace(/\d/g, (match, index) => {
-      if(index === 0) {
+      if (index === 0) {
         return digitInWords[match];
       }
       return ` ${digitInWords[match]}`;
@@ -170,16 +178,16 @@ const stringManipulations = {
   /**
    * isDigit method returns true if the string is just
    * a single digit
-   * @return {boolean}
+   * @return {boolean}: true if the string is digit, false otherwise
    */
   isDigit() {
     return /^\d$/g.test(this);
   },
 
   /**
-   * doubleCheck method returns true if the same 
+   * doubleCheck method returns true if the same
    * character follows each other  and false otherwise
-   * @return {boolean}
+   * @return {boolean}:
    */
   doubleCheck() {
     return /(.)\1/.test(this);

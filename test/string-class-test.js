@@ -1,8 +1,12 @@
+/* eslint-disable strict */
+
 'use strict';
+
+/* eslint-enable strict */
 const assert = require('assert');
 require('../src/string-class');
 
-describe('Test for hasVowels method', () => {
+describe('hasVowels', () => {
   it('should return false for words without vowels', () => {
     assert.equal('dfhgjl'.hasVowels(), false);
   });
@@ -18,7 +22,7 @@ describe('Test for hasVowels method', () => {
   });
 });
 
-describe('Test for toUpper method', () => {
+describe('toUpper', () => {
   it('should transform any lower case to uppercase while' +
   'leaving the uppercase', () => {
     assert.equal('anDelA'.toUpper(), 'ANDELA');
@@ -32,7 +36,7 @@ describe('Test for toUpper method', () => {
   });
 });
 
-describe('Test for toLower method', () => {
+describe('toLower', () => {
   it('should return lower case characters', () => {
     assert.equal('THIS IS'.toLower(), 'this is');
   });
@@ -44,7 +48,7 @@ describe('Test for toLower method', () => {
   });
 });
 
-describe('Test for ucFirst method', () => {
+describe('ucFirst', () => {
   it('should transform only the first character to uppercase', () => {
     assert.equal('firSt'.ucFirst(), 'FirSt');
   });
@@ -56,7 +60,7 @@ describe('Test for ucFirst method', () => {
   });
 });
 
-describe('Test for isQuestion method', () => {
+describe('isQuestion', () => {
   it('should return true if string ends with ?', () => {
     assert.equal('Is this a question?'.isQuestion(), true);
   });
@@ -68,7 +72,7 @@ describe('Test for isQuestion method', () => {
   });
 });
 
-describe('Test for words method', () => {
+describe('words', () => {
   it('should return an array of words', () => {
     assert.deepEqual('It is working'.words(), ['It', 'is', 'working']);
   });
@@ -81,7 +85,7 @@ describe('Test for words method', () => {
   });
 });
 
-describe('Test for wordCount method', () => {
+describe('wordCount', () => {
   it('should return a count of words', () => {
     assert.equal('It is working'.wordCount(), 3);
   });
@@ -91,7 +95,7 @@ describe('Test for wordCount method', () => {
   });
 });
 
-describe('Test for toCurrency method', () => {
+describe('toCurrency', () => {
   it('should format a number to the right currency', () => {
     assert.equal('11111.11'.toCurrency(), '11,111.11');
   });
@@ -103,7 +107,7 @@ describe('Test for toCurrency method', () => {
   });
 });
 
-describe('Test for fromCurrency method', () => {
+describe('fromCurrency', () => {
   it('should format a currency in the number format', () => {
     assert.equal('11,111.11'.fromCurrency(), '11111.11');
   });
@@ -112,7 +116,7 @@ describe('Test for fromCurrency method', () => {
   });
 });
 
-describe('Test for inverseCase method', () => {
+describe('inverseCase', () => {
   it('should inverse upper to lower and lower to upper', () => {
     assert.equal('Mr. Ben'.inverseCase(), 'mR. bEN');
   });
@@ -121,7 +125,7 @@ describe('Test for inverseCase method', () => {
   });
 });
 
-describe('Test for alternatingCase method', () => {
+describe('alternatingCase', () => {
   it('should alternate between cases while starting with lower case', () => {
     assert.equal('Onomatopoeia'.alternatingCase(), 'oNoMaToPoEiA');
   });
@@ -130,7 +134,7 @@ describe('Test for alternatingCase method', () => {
   });
 });
 
-describe('Test for getMiddle method', () => {
+describe('getMiddle', () => {
   it('should return 2 middle characters for even number words', () => {
     assert.equal('read'.getMiddle(), 'ea');
   });
@@ -139,7 +143,7 @@ describe('Test for getMiddle method', () => {
   });
 });
 
-describe('Test for numberWords method', () => {
+describe('numberWords', () => {
   it('should convert each digit to its word form', () => {
     assert.equal('325'.numberWords(), 'three two five');
   });
@@ -148,7 +152,7 @@ describe('Test for numberWords method', () => {
   });
 });
 
-describe('Test for isDigit method', () => {
+describe('isDigit', () => {
   it('should return true for single digits', () => {
     assert.equal('3'.isDigit(), true);
   });
@@ -157,7 +161,7 @@ describe('Test for isDigit method', () => {
   });
 });
 
-describe('Test for doubleCheck method', () => {
+describe('doubleCheck', () => {
   it('should return true if same characters follows each other', () => {
     assert.equal('aagjglkdk'.doubleCheck(), true);
   });
