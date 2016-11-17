@@ -8,7 +8,7 @@ const stringManipulations = {
   },
 
   /**
-   * toupper method converts all characters to their upper case
+   * toUpper method converts all characters to their upper case
    * @return {string}, a string with upper case characters
    */
   toUpper() {
