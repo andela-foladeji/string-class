@@ -1,8 +1,3 @@
-/* eslint-disable strict */
-
-'use strict';
-
-/* eslint-enable strict */
 const assert = require('assert');
 require('../src/string-class');
 

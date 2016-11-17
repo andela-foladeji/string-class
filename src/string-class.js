@@ -1,9 +1,3 @@
-/* eslint-disable strict */
-
-'use strict';
-
-/* eslint-enable strict */
-
 const stringManipulations = {
   /**
    * hasVowels method test if a string contains vowels
