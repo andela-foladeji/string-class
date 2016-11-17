@@ -47,7 +47,7 @@ const stringManipulations = {
   },
 
   /**
-   * trimSpace method removes the trailing and preceeding empty
+   * trimSpace method removes the trailing and preceding empty
    * spaces in a string
    * @return {string}; trimmed string
    */
@@ -91,10 +91,8 @@ const stringManipulations = {
       length = parts[0].length;
     let firstCommaPosition = length % 3;
     firstCommaPosition = (firstCommaPosition === 0) ? 3 : firstCommaPosition;
-    /* eslint-disable prefer-template */
     const regExpression =
-    new RegExp('^[0-9]{' + firstCommaPosition + '}|[0-9]{3}(?!$)', 'g');
-    /* eslint-enable prefer-template */
+    new RegExp(`^[0-9]{${firstCommaPosition}}|[0-9]{3}(?!$)`, 'g');
     parts[0] = parts[0].replace(regExpression, number =>
       `${number},`
     );
@@ -115,11 +113,11 @@ const stringManipulations = {
    * becomes upper case
    * @return {string}: a string with inverted case
    */
+/* eslint-disable no-confusing-arrow */
   inverseCase() {
-    return this.replace(/[a-zA-Z]/g, (match) => {
-      const answer = /[A-Z]/.test(match) ? match.toLower() : match.toUpper();
-      return answer;
-    });
+    return this.replace(/[a-zA-Z]/g, match =>
+      /[A-Z]/.test(match) ? match.toLower() : match.toUpper()
+    );
   },
 
   /**
@@ -127,11 +125,11 @@ const stringManipulations = {
    * @return {string}; with alternated cases e.g aNoNyMoUs
    */
   alternatingCase() {
-    return this.replace(/[A-Za-z]/g, (match, index) => {
-      const answer = (index % 2 === 0) ? match.toLower() : match.toUpper();
-      return answer;
-    });
+    return this.replace(/[A-Za-z]/g, (match, index) =>
+      (index % 2 === 0) ? match.toLower() : match.toUpper()
+    );
   },
+  /* eslint-enable no-confusing-arrow */
 
   /**
    * getMiddle method returns the character or the two characters at the mid
