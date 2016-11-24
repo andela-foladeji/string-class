@@ -1,0 +1,31 @@
+{
+  "name": "string-class",
+  "version": "1.0.0",
+  "description": "An extension to javascript String's class for more string manipulations",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha --R test/string-class-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-foladeji/string-class.git"
+  },
+  "keywords": [
+    "prototype",
+    "strings",
+    "andela",
+    "object-oriented"
+  ],
+  "author": "Oladeji Femi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-foladeji/string-class/issues"
+  },
+  "homepage": "https://github.com/andela-foladeji/string-class#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.14",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2"
+  }
+}
